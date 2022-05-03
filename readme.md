@@ -1,9 +1,11 @@
-# Testing Bigquery API - ETL to extract and load information from mysql to BigQuery
+# Testing Bigquery API - ETL to extract data from mysql using sql2json and load that information to BigQuery
 
 ## Necessary dependencies
+```
 pip install --upgrade google-cloud-bigquery
 pip install python-dotenv
 pip install pandas
+```
 
 ## Useful links
 https://googleapis.dev/python/bigquery/latest/index.html
