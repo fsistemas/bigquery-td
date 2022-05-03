@@ -1,13 +1,17 @@
+# Testing Bigquery API - ETL to extract and load information from mysql to BigQuery
+
+## Necessary dependencies
 pip install --upgrade google-cloud-bigquery
 pip install python-dotenv
 pip install pandas
 
+## Useful links
 https://googleapis.dev/python/bigquery/latest/index.html
 https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries#client-libraries-install-python
 https://cloud.google.com/bigquery/docs/loading-data-local
 https://cloud.google.com/bigquery/docs/reference/standard-sql/dml-syntax
 
-# Insert/Update by ID, Delete rows does not exist in source/N/A
+## Insert/Update by ID, Delete rows does not exist in source
 
 ```
 MERGE MyDataset.table_test01 test
@@ -18,18 +22,3 @@ WHEN MATCHED THEN
 WHEN NOT MATCHED THEN
   INSERT ROW
 ```
-
-# Opcion 1
-
-## Definir fecha desde cuando se va a reprocesar
-## Extraer datos a CSV
-## Borrar datos mas viejos que x fecha en tabla grande
-## Insertar datos nuevos en tabla temporal(Trunca/Inserta)
-## Merge de las dos tablas
-
-# Opcion 2
-
-## Definir fecha desde cuando se va a reprocesar
-## Extraer datos a CSV
-## Borrar datos mas viejos que x fecha en tabla grande
-## Insertar datos nuevos en tabla grande, append
